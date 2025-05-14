@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>❝ INVINCIBLE APOLOGY ❞</title>
+  <link rel="icon" href="invincible_png_by_dglproductions_dekf6tx-pre.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --invincible-red: #e23636;
+      --invincible-blue: #1a4e8a;
+      --invincible-yellow: #f9c80e;
+      --invincible-black: #000;
+      --white: #fff;
+      --atom-pink: #ff69b4;
+      --viltrum-purple: #6a0dad;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Bangers', cursive;
+      background-color: var(--invincible-blue);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.4;
+    }
+    .woodblock-font {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 1px var(--invincible-black);
+      text-shadow: 2px 2px 0 var(--invincible-black);
+      color: var(--invincible-yellow);
+      margin: 0.5rem 0;
+    }
+    header {
+      text-align: center;
+      padding: 1rem 0.5rem;
+      background: rgba(0,0,0,0.8);
+      border-bottom: 3px solid var(--invincible-red);
+      position: relative;
+      width: 100%;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, 
+        var(--invincible-red) 0%, 
+        var(--invincible-yellow) 25%, 
+        var(--invincible-blue) 50%, 
+        var(--atom-pink) 75%, 
+        var(--viltrum-purple) 100%);
+    }
+    header img {
+      width: 80px;
+      margin: 0 0.5rem;
+      vertical-align: middle;
+      filter: drop-shadow(0 0 3px var(--atom-pink));
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      -webkit-text-stroke: 0.5px var(--invincible-black);
+      color: var(--atom-pink);
+      text-shadow: 2px 2px 0 var(--invincible-black);
+    }
+    .apology-container {
+      background: var(--white);
+      border: 3px solid var(--invincible-black);
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 95%;
+      box-shadow: 5px 5px 0 var(--invincible-red);
+      color: var(--invincible-black);
+      position: relative;
+      overflow: hidden;
+    }
+    .apology-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--invincible-yellow);
+    }
+    .character-showcase {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .character-card {
+      width: 30%;
+      max-width: 120px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .character-card:hover {
+      transform: translateY(-5px);
+    }
+    .character-card img {
+      width: 100%;
+      border: 2px solid var(--invincible-black);
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .character-card p {
+      font-family: 'Permanent Marker', cursive;
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px var(--invincible-yellow);
+      color: var(--invincible-red);
+    }
+    .apology-text {
+      background: var(--white);
+      border: 2px solid var(--invincible-black);
+      padding: 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: center;
+      box-shadow: 3px 3px 0 var(--invincible-yellow);
+      margin: 1rem 0;
+      position: relative;
+      font-family: 'Bangers', cursive;
+      letter-spacing: 0.5px;
+    }
+    .highlight {
+      color: var(--atom-pink);
+      font-weight: bold;
+      text-shadow: 1px 1px var(--invincible-black);
+      font-size: 1.1em;
+    }
+    .comic-panel {
+      margin: 1.5rem auto;
+      max-width: 100%;
+      border: 3px solid var(--invincible-black);
+      box-shadow: 5px 5px 0 var(--invincible-yellow);
+      position: relative;
+      overflow: hidden;
+    }
+    .comic-panel img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .comic-text {
+      background: rgba(0,0,0,0.85);
+      color: white;
+      padding: 0.8rem;
+      font-size: 1.1rem;
+      font-family: 'Bangers', cursive;
+      text-align: center;
+      border-top: 3px solid var(--invincible-red);
+      position: relative;
+    }
+    .interactive-button {
+      background: var(--invincible-red);
+      color: var(--white);
+      border: 2px solid var(--invincible-black);
+      padding: 0.8rem 1.5rem;
+      font-size: 1.2rem;
+      font-family: 'Bangers', cursive;
+      margin: 1.5rem auto;
+      display: block;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 var(--invincible-black);
+      transition: all 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 90%;
+      max-width: 300px;
+    }
+    .interactive-button:hover {
+      background: var(--invincible-yellow);
+      color: var(--invincible-black);
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0 var(--invincible-black);
+    }
+    .signature {
+      text-align: right;
+      font-size: 1.5rem;
+      font-family: 'Bebas Neue', sans-serif;
+      margin-top: 1.5rem;
+      text-shadow: 1px 1px var(--invincible-yellow);
+      -webkit-text-stroke: 0.5px var(--invincible-black);
+      color: var(--invincible-red);
+      position: relative;
+    }
+    .signature::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      right: 0;
+      width: 70px;
+      height: 2px;
+      background: var(--invincible-black);
+    }
+    .comic-strip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .comic-strip img {
+      width: 100%;
+      max-width: 300px;
+      border: 2px solid var(--invincible-black);
+      box-shadow: 3px 3px 0 var(--invincible-red);
+    }
+    .invincible-logo {
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+    .invincible-logo img {
+      width: 150px;
+      filter: drop-shadow(0 0 3px var(--atom-pink));
+    }
+    @media (min-width: 768px) {
+      .woodblock-font {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .comic-strip {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .comic-strip img {
+        width: calc(50% - 0.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://media4.giphy.com/media/kwfOAN9MsmTdZNRAYA/giphy.gif" alt="Invincible">
+    <div class="woodblock-font">I'M SORRY</div>
+    <img src="https://media0.giphy.com/media/fWWEjYkM4aFsEwonHU/giphy.gif" alt="Atom Eve">
+    <h2>TO MY <span class="highlight">ATOM EVE</span></h2>
+    <img src="invincible_png_by_dglproductions_dekf6tx-pre.png" alt="Atom Eve">
+  </header>
+
+  <div class="invincible-logo">
+    <img src="cxmablg3d7nqpzBOyHE6a0DNAAw.webp" alt="Invincible Logo">
+
+  </div>
+
+  <div class="apology-container">
+    <div class="character-showcase">
+      <div class="character-card">
+        <img src="WhatsApp Image 2025-05-14 at 04.17.40_e02ecdb8.jpg" alt="Her Alone">
+        <p>My Pumpkin</p>
+      </div>
+      <div class="character-card">
+        <img src="WhatsApp Image 2025-05-14 at 04.17.40_ef3f6885.jpg" alt="Us Together 1">
+        <p>THE TWO OF US</p>
+      </div>
+      <div class="character-card">
+        <img src="WhatsApp Image 2025-05-14 at 04.17.41_c6680bcd.jpg" alt="Us Together 2">
+        <p>ALWAYS TOGETHER</p>
+      </div>
+    </div>
+
+    <div class="apology-text">
+      <p>I SCREWED UP. <span class="highlight">BAD.</span></p>
+      <p>YOU'RE MY <span class="highlight">ATOM EVE</span> — STRONGER THAN OMNI-MAN IN HEART AND MIND. I DON'T DESERVE YOU, BUT I'M TRYING TO BE BETTER.</p>
+      <p>LIKE MARK, I FALL. BUT LIKE YOU, I WANT TO RISE. PLEASE SEE THE GOOD IN ME THE WAY YOU ALWAYS DO.</p>
+      <p>THIS ISN'T A <span class="highlight">VILTRUMITE LIE</span>. THIS IS TRUTH FROM SOMEONE WHO LOVES YOU ENDLESSLY.</p>
+    </div>
+
+    <div class="comic-strip">
+      <img src="143359.jpg" alt="Mark and Eve romantic moment 1">
+      <img src="download.jpeg" alt="Mark and Eve romantic moment 2">
+      <img src="thumb-143357.jpg" alt="Mark and Eve romantic moment 3">
+    </div>
+
+    <div class="comic-panel">
+      <img src="WhatsApp Image 2025-05-14 at 04.17.40_ef3f6885.jpg" alt="Comic Panel">
+      <div class="comic-text">"I'LL ALWAYS COME BACK TO YOU"</div>
+    </div>
+
+    <div class="comic-panel">
+      <img src="Invincible-Atom-Eve.webp" alt="Mark and Eve flying together">
+      <div class="comic-text">"NO MATTER WHAT UNIVERSE WE'RE IN, I'LL FIND YOU"</div>
+    </div>
+
+    <button class="interactive-button" id="forgiveButton">CLICK IF YOU FORGIVE ME</button>
+
+    <div class="signature">FOREVER YOURS,<br>AHMEEE</div>
+  </div>
+
+  <div class="comic-strip">
+    <img src="hq720.jpg" alt="Mark and Eve kiss">
+    <img src="AA1yECu5.jpeg" alt="Mark and Eve embrace">
+    <img src="1394831.png" alt="Mark and Eve sunset">
+  </div>
+
+  <script>
+    document.getElementById('forgiveButton').addEventListener('click', () => {
+      const btn = document.getElementById('forgiveButton');
+      btn.textContent = "THANK YOU! I LOVE YOU!";
+      btn.style.background = "var(--invincible-yellow)";
+      btn.style.color = "var(--invincible-black)";
+      
+      // Create floating hearts animation
+      for (let i = 0; i < 15; i++) {
+        createHeart();
+      }
+    });
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.innerHTML = '❤️';
+      heart.style.position = 'fixed';
+      heart.style.fontSize = Math.random() * 15 + 10 + 'px';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      heart.style.zIndex = '1000';
+      heart.style.opacity = '0.8';
+      heart.style.animation = `floatUp ${Math.random() * 2 + 1.5}s linear forwards`;
+      
+      document.body.appendChild(heart);
+      
+      setTimeout(() => {
+        heart.remove();
+      }, 3000);
+    }
+
+    // Add keyframes for floating animation
+    const style = document.createElement('style');
+    style.innerHTML = `
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
